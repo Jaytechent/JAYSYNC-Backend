@@ -9,6 +9,7 @@ const EventSchema = new Schema(
         'sponsor': {type: String, required: true},
         'description': {type: String, required: true},
         'seat':{type: String, required: true},
+        'price' : {type: String, required: true},
         'image' : {type: String, required: true,
             default: 'https://placehold.co/650x400/png'
         },
