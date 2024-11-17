@@ -8,7 +8,8 @@ import storage from 'node-persist';
 dotenv.config();
 
 // Initialize node-persist storage
-await storage.init();
+await storage.init({
+  dir: '/tmp/node-persist',})
 
 // Set up OAuth 1.0a client
 const oauth = OAuth({
