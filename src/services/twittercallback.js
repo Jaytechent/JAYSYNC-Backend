@@ -3,7 +3,7 @@ import qs from 'querystring';
 import OAuth from 'oauth-1.0a';
 import crypto from 'crypto';
 import dotenv from 'dotenv';
-import storage from '../utils/storage';
+import storage from '../utils/storage.js';
 
 dotenv.config();
 

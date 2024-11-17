@@ -1,6 +1,6 @@
 import { TwitterApi } from 'twitter-api-v2';
 import dotenv from 'dotenv';
-import storage from '../../utils/storage';
+import storage from '../../utils/storage.js';
 
 dotenv.config();
 
