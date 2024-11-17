@@ -7,7 +7,6 @@ import storage from '../utils/storage.js';
 
 dotenv.config();
 
-
 // Set up OAuth 1.0a client
 const oauth = OAuth({
   consumer: {

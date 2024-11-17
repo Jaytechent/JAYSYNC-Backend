@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from "express";
 import applyMiddlewares from "./middlewares/index.js";
+import debugRouter from "./middlewares/vercel-debug.js";
 // import eventRouter from './routes/events.js';
 import userRoute from './routes/users.js';
 import postRouter from './routes/post.js';
@@ -30,6 +31,7 @@ app.use((req, res, next) => {
 
 // Routing Handling
 app.use(userRoute)
+app.use(debugRouter)
 // app.use(eventRouter)
 app.use(postRouter)
 // app.use(shopRouter)
