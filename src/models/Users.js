@@ -20,6 +20,8 @@ const UserSchema = new Schema(
         'role': {type: String, required: true, enum: ['admin', 'organizer', 'user'], default: 'user'},
         'password' : { type: String},
         'createdAt': { type: Date, default: new Date()},
+        'twitterToken': { type: String }, // For storing the access token
+        'twitterSecret': { type: String } 
     },
     { versionKey: false }
 )

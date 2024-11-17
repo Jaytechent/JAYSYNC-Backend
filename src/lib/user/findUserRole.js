@@ -1,5 +1,5 @@
 import User from "../../models/Users.js";
-
+console.log(" User role  endpoint was hit");
 const findUserRole = async (email) => {
     try {
         const query = {

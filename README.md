@@ -1,127 +1,84 @@
-# Event Management System and Booking Platform
+# JaySync
 
-Welcome to the Event Management System, a project built with MERN.
+**JaySync** is an open-source social media posting tool that enables users to simultaneously post across multiple social platforms like Twitter, Instagram, Facebook, and TikTok.
 
-## Main Features
+## Features
+1. Post a single message across multiple platforms.
+2. Supports Twitter, Facebook, Instagram, and TikTok.
+3. API-driven for integration with other systems.
+4. Open-source, with community-driven development.
+5. **Additional Expected Features**:
+   - Improved User Interface (UI)
+   - Post Scheduling
+   - Integration with other social media platforms as suggested by the community.
 
-1. **User-friendly Event Creation**
-2. **Dedicated dashborad for user, admin, and event organizer**
-3. **Ticketing and Registration**
-4. **Custom Event Creation**
-5. **Shop section for event accessories**
-5. **Payment Gateway Integration**
-6. **Chatbot guide**
-7. **Notification system**
-8. **Interactive Event Pages**
-9. **Feedback and Review System**
-10. **Responsive interfaces across all devices**
+## Getting Started
 
-## Contributing
+### Prerequisites
+- Node.js >= 16.x
+- MongoDB
+- API keys for Twitter, Facebook, Instagram, and TikTok
 
-We welcome contributions from the community! Follow these guidelines to contribute to the project:
+### Installation
 
-### Contributing from `stage` Branch
-
-1. Ensure you are on the `stage` branch before starting any work:
-
-   ```bash
-   git checkout stage
-   ```
-
-2. Pull the latest changes from the `stage` branch to make sure you are up-to-date:
+1. Clone the repository:
 
    ```bash
-   git pull origin stage
-   ```
+   git clone https://github.com/yourusername/JaySync.git
+   cd JaySync
+   npm install
+   npm run dev
 
-3. Create a new branch for your feature or bug fix. Use a descriptive branch name:
+2. Create a .env file and add your Backend URL:
+  
+       BACKEND_URL=localhost:5000
 
+3. cd to the backend part of the app and install dependencies:
    ```bash
-   git checkout -b feature/my-new-feature
-   ```
+   cd backend
+   npm install
+   node server.js
 
-4. Make your changes and commit them:
-
+4. Create a .env file and add your API keys and MongoDB URL:
    ```bash
-   git add .
-   git commit -m "Add a new feature"
-   ```
-
-5. Push your changes to your forked repository:
-
-   ```bash
-   git push origin feature/my-new-feature
-   ```
-
-6. Create a pull request:
-
-   - Go to your forked repository on GitHub.
-   - Switch to the branch you just pushed.
-   - Click on the "New Pull Request" button.
-   - Provide a clear title and description for your pull request.
-   - Submit the pull request for review.
-
-### Adding a New Branch and Pushing Changes
-
-1. Create a new branch for your work. Use a descriptive branch name:
-
-   ```bash
-   git checkout -b feature/my-new-feature
-   ```
-
-2. Make your changes and commit them:
-
-   ```bash
-   git add .
-   git commit -m "Add a new feature"
-   ```
-
-3. Push your changes to your forked repository:
-
-   ```bash
-   git push origin feature/my-new-feature
-   ```
-
-4. Create a pull request:
-
-   - Go to your forked repository on GitHub.
-   - Switch to the branch you just pushed.
-   - Click on the "New Pull Request" button.
-   - Provide a clear title and description for your pull request.
-   - Submit the pull request for review.
-
-Remember to follow the project's coding standards and guidelines when making contributions. Thank you for contributing to our project!
-
-## Installation
-
-To get started with the project, follow these installation steps:
-
-1. Clone the repository to your local machine.
-2. Install project dependencies by running `npm install`.
-3. Start the development server with `npm run dev`.
-
-Feel free to reach out if you have any questions or need further assistance!
-
-## Credentials
-
-**Admin login:**
-
-- Email: admin@gmail.com
-- Password: 123456
-
-**Event Organizer login:**
-
-- Email: organizer@gmail.com
-- Password: 123456
-
-**User login:**
-
-- Email: user@gmail.com
-- Password: 123456
+   TWITTER_API_KEY=<your-twitter-api-key>
+   FACEBOOK_API_KEY=<your-facebook-api-key>
+   INSTAGRAM_API_KEY=<your-instagram-api-key>
+   TIKTOK_API_KEY=<your-tiktok-api-key>
+   MONGO_URI=<your-mongodb-uri>
+   JWT_SECRET= Add secret token
 
 
+5. **API Endpoints**
+   
+   Endpoint	Method	Description
+   
+   /api/post	POST	Create a post across platforms
+
+7. **HOW TO CONTRIBUTE**
+
+   **Decide any feature to add or improvement of any part of the app**
+   
+   Fork the repo
+   
+   Create a feature branch (git checkout -b feature/AmazingFeature)
+   
+   Commit your changes (git commit -m 'Add AmazingFeature')
+   
+   Push to the branch (git push origin feature/AmazingFeature)
+   
+   Open a Pull Request
 
 
-
-
+9. ## Technologies Used
+  - **Node.js**: JavaScript runtime for building server-side applications.
+  - **Express.js**: Web application framework for Node.js, used to build APIs.
+  - **MongoDB**: NoSQL database for storing user data and posts.
+- **Mongoose**: ODM (Object Data Modeling) library for MongoDB and Node.js.
+- **React**: Frontend library for building user interfaces.
+- **Vite**: Next-generation frontend build tool for faster development and optimized builds.
+- **JWT (JSON Web Tokens)**: For secure user authentication and authorization.
+- **CORS (Cross-Origin Resource Sharing)**: Middleware to enable cross-origin requests.
+- **dotenv**: For managing environment variables in a `.env` file.
+- **Axios / Fetch API**: For making HTTP requests from the client to the server.
 

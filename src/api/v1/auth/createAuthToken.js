@@ -5,14 +5,14 @@ const createAuthToken = async (res, req, next) => {
     try {
         const user = req.body;
         console.log(user);
-        const token = jwt.sign(user.email, process.env.ACCESS_TOKEN, {
+        const token = jwt.sign({ id: user._id, email: user.email }, process.env.ACCESS_TOKEN_SECRET, {
             expiresIn: "1h",
         });
-        console.log((token));
+   
         res.send({token});
 
     } catch (err) {
-        // next(err);
+        
         console.log(err)
     }
 };
