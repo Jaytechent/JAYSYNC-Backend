@@ -1,12 +1,9 @@
 import { TwitterApi } from 'twitter-api-v2';
 import dotenv from 'dotenv';
-import storage from 'node-persist';
+import storage from '../../utils/storage';
 
 dotenv.config();
 
-// Initialize node-persist storage
-await storage.init({
-  dir: '/tmp/node-persist',})
 
 const twitterClient = new TwitterApi({
   appKey: process.env.TWITTER_API_KEY,

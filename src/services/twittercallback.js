@@ -3,13 +3,10 @@ import qs from 'querystring';
 import OAuth from 'oauth-1.0a';
 import crypto from 'crypto';
 import dotenv from 'dotenv';
-import storage from 'node-persist';
+import storage from '../utils/storage';
 
 dotenv.config();
 
-// Initialize node-persist storage
-await storage.init({
-  dir: '/tmp/node-persist',})
 
 // Set up OAuth 1.0a client
 const oauth = OAuth({
