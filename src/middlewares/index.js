@@ -1,40 +1,19 @@
 import cookieParser from "cookie-parser";
 import cors from 'cors';
 import express from 'express';
-import session from 'express-session'; 
-import dotenv from 'dotenv';
+import "dotenv/config";
 
-dotenv.config();
+const applyMiddlewares = (app)=>{
+    app.use(cors({
+        origin: [process.env.CLIENT],
+        credentials:true
+    }))
+    app.use(cookieParser())
+    app.use(express.json())
+}
 
-const applyMiddlewares = (app) => {
-  // CORS Setup
-  app.use(cors({
-    origin: process.env.CLIENT,  
-    credentials: true,
-  }));
-  
-  app.use(cookieParser());
+export default applyMiddlewares
 
-  // Body parser
-  app.use(express.json());
-
-  // Session Setup
-  app.use(
-    session({
-      secret: process.env.SESSION_SECRET, 
-      resave: false,
-      saveUninitialized: false,
-      cookie: {
-        secure: process.env.NODE_ENV === 'production', 
-        httpOnly: true,
-        maxAge: 1000 * 60 * 60,
-        sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax', // Required for cross-site cookies in production
-      },
-    })
-  );
-};
-
-export default applyMiddlewares;
 
 // import cookieParser from "cookie-parser";
 // import cors from 'cors';
